@@ -1,0 +1,1745 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chenjingkai</title>
+    <link rel="stylesheet" href="./reset.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+        integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link rel="stylesheet" href="./fontawesome-free-5.15.3-web/css/all.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: rgba(211, 176, 125, 0.685);
+        }
+
+        .container {
+            min-width: none;
+            height: 100%;
+            margin: 0 auto;
+        }
+
+        @media (min-width:1440px) {
+            .container {
+                max-width: 1440px;
+            }
+        }
+
+
+        /* ----------------------------------------navbar------------------------------------------- */
+        nav {
+            background-color: rgba(134, 85, 71);
+            min-height: 80px;
+            max-width: 100%;
+            position: sticky;
+            top: 0;
+            z-index: 100000;
+        }
+
+        .logo,
+        .logo2 {
+            width: 80px;
+            height: 80px;
+
+        }
+
+        .logo a img,
+        .logo2 a img {
+            width: 60%;
+            height: 60%;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+
+        .nav-center {
+            margin-right: auto;
+            height: 100%;
+
+        }
+
+        .nav-center a {
+            margin-right: 10px;
+            color: #fff;
+            font-weight: 500;
+
+        }
+
+        .title {
+            min-height: 80px;
+
+        }
+
+        .navbar-chenjingkai {
+            background-color: rgba(134, 85, 71);
+            min-height: 30px;
+        }
+
+        .nav-right {
+            height: 100%;
+        }
+
+        .nav-right a {
+            margin: 0 10px;
+        }
+
+        .nav-right a i {
+            color: #fff;
+        }
+
+
+        .custom-toggler.navbar-toggler {
+            border-color: white;
+        }
+
+        .navbar-toggler-icon {
+            border-color: white !important;
+        }
+
+        .navbar-nav li a {
+            color: white;
+        }
+
+        .dropdown-item {
+            color: black !important;
+
+        }
+
+        @media (min-width:1000px) {
+            .mt-xl-150 {
+                margin-top: 150px;
+            }
+
+        }
+
+
+
+        /* ----------------------------------------herosection */
+        .herosection {
+            min-height: 900px;
+            /* border-bottom: 1px solid black; */
+
+        }
+
+        .mt-150 {
+            margin-top: 150px;
+        }
+
+        .slogan span {
+            font-size: 80px;
+            font-weight: 700;
+        }
+
+        .slogan .companyname {
+            font-size: 40px;
+            font-weight: 700;
+
+        }
+
+
+        .ml-5 {
+            margin-left: 5rem;
+        }
+
+        /* ----------------------------------------------herosection carousel */
+
+        .wrap {
+            max-height: 600px;
+            width: 800px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        ul.img-wrap {
+            padding-left: 0;
+            min-width: 4000px;
+            display: flex;
+            transform: translateX(-1600px);
+            transition: .5s;
+        }
+
+        li {
+            flex-shrink: 1;
+            height: 100%;
+        }
+
+        li img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+
+        .slider-dots {
+            display: flex;
+            position: absolute;
+            /* 參考坐標會往父層找 */
+            bottom: 0;
+            left: 50%;
+
+            transform: translateX(-50%);
+
+        }
+
+        .slider-dots li {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            border: 2px solid white;
+            margin: 0 10px;
+        }
+
+        .left-arrow-area,
+        .right-arrow-area {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            width: 80px;
+            /*改變游標]*/
+            cursor: pointer;
+
+            /*把箭頭置中*/
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .right-arrow-area {
+            right: 0;
+        }
+
+        .left-arrow-area {
+            left: 0;
+        }
+
+        .fas {
+            color: aliceblue;
+
+        }
+
+        .slick1 {
+            margin-left: 20%;
+            width: 50%;
+        }
+
+        .item-img {
+            height: 600px;
+            width: 400px;
+
+        }
+
+        .item-img img {
+            width: 100%;
+            height: auto;
+        }
+
+        /*-----------------------------About Us------------------------------------  */
+
+        .AboutUs {
+            min-height: 980px;
+            /* border-bottom: 1px solid black; */
+        }
+
+        .introduce {
+            margin-top: 200px;
+        }
+
+        .introduce h1 {
+            font-size: 100px;
+        }
+
+        .mt-11 {
+            margin-top: 11rem;
+        }
+
+        .introduce-img {
+            height: 600px;
+            width: 900px;
+            margin-top: 200px;
+
+        }
+
+        .introduce-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            position: relative;
+            border-radius: 30px;
+        }
+
+        .introduce-img .img200 {
+            height: 360px;
+            width: 480px;
+            position: absolute;
+            top: -100px;
+            right: -100px;
+            border-radius: 30px;
+        }
+
+        .introduce-img2 {
+            height: 400px;
+            width: 600px;
+            margin-top: 100px;
+        }
+
+        .introduce-img2 img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            position: relative;
+            border-radius: 30px;
+        }
+
+        .introduce-img2 .img200 {
+            height: 240px;
+            width: 360px;
+            position: absolute;
+            top: -100px;
+            right: -100px;
+            border-radius: 30px;
+        }
+
+        .introduce-img2 img:hover {
+            transition: transform .5s ease;
+            transform: scale(1.1, 1.1);
+        }
+
+        .introduce-img img:hover {
+            transition: transform .5s ease;
+            transform: scale(1.1, 1.1);
+        }
+
+        /* --------------------------------newsletter------------------------------------------- */
+        .newsletter {
+            min-height: 200px;
+            width: 100%;
+            background-color: rgb(139, 69, 19);
+        }
+
+        .newsletter h1 {
+            text-align: center;
+            /* margin-top: 3rem; */
+            font-size: 72px;
+            color: white;
+        }
+
+        .emailaddress {
+            margin: 0 auto;
+            width: 450px;
+        }
+
+        .emailaddress button {
+            background: url(./img/logo.jpg);
+            width: 25%;
+            border-radius: 0;
+        }
+
+        .emailstyle {
+            background-color: white;
+            border: transparent;
+            width: 75%;
+        }
+
+        /* ---------------------------------type----------------------------------------------------- */
+        .type {
+            min-height: 1200px;
+            /* border-bottom: 1px solid black; */
+        }
+
+        .mt-4 {
+            margin-top: 4rem;
+        }
+
+        .type h2 {
+            margin-right: 0;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid black;
+
+        }
+
+        .type-product {
+            width: 300px;
+            min-height: 300px;
+
+        }
+
+        .type-product img {
+            width: 100%;
+            height: 70%;
+            object-fit: cover;
+        }
+
+        .mt-10 {
+            margin-top: 10rem;
+        }
+
+        .type-product h3 {
+            border-bottom: 1px dashed black;
+            width: 60%;
+            padding-bottom: 10px;
+        }
+
+        .type-wrap {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        /* -------------------------------leather------------------------------------------------------------- */
+
+        .leather {
+            min-height: 980px;
+            /* border-bottom: 1px solid black; */
+            width: 100%;
+        }
+
+        .leather h2 {
+            margin-left: 5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid black;
+        }
+
+        .leather img {
+            width: 80%;
+            height: 80%;
+        }
+
+        .leather-selector {
+            width: 80px;
+            height: 250px;
+        }
+
+
+        .leather-selector img {
+            width: 100%;
+            height: 80%;
+            border-radius: 10px;
+
+        }
+
+        .leather-selector img:hover {
+            box-shadow: 0 0 20px 2px #5a5959;
+            transition: 0.5s;
+        }
+
+        .leather-selector-area {
+            width: 60%;
+        }
+
+        .demo-area {
+            width: 40%;
+            height: 750px;
+            border-radius: 60px;
+        }
+
+        .demo-area img {
+            width: 100%;
+            height: 100%;
+            border-radius: 5px;
+            padding-left: 10px;
+        }
+
+        /* ---------------------------------sole--------------------------------------------------------------- */
+        .sole {
+            min-height: 1200px;
+            width: 100%;
+            /* border-bottom: 1px solid black; */
+        }
+
+        .sole-product {
+            height: 200px;
+            min-width: 30px;
+        }
+
+        .sole-product img {
+            width: 80%;
+            height: 80%;
+            object-fit: cover;
+        }
+
+        .sole h2 {
+            margin-left: 10rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid black;
+
+        }
+
+        .nt600 {
+            width: 100%;
+        }
+
+        .sole-product h3 {
+            border-bottom: 1px dashed black;
+            padding-bottom: 1rem;
+            width: 60%;
+        }
+
+        .sole-product p {
+            text-align: right;
+            font-size: 20px;
+        }
+
+        .sole-product a img:hover {
+            transition: transform .5s ease;
+            transform: scale(1.2, 1.2) !important;
+        }
+
+        /* ------------------------------------------eyelet/laces--------------------------------------------------------- */
+        .eyeletlaces {
+            min-height: 980px;
+            width: 100%;
+            /* border-bottom: 1px solid black; */
+        }
+
+        .eyeletlaces h2 {
+            margin-left: 15rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid black;
+
+        }
+
+        .laces-product {
+            height: 300px;
+            width: 200px;
+
+
+        }
+
+        .mr-10p {
+            margin-right: 10px;
+        }
+
+        .laces-product img {
+            width: 50%;
+            height: 50%;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+
+        .laces-product a img:hover {
+            transition: transform .5s ease;
+            transform: scale(1.1, 1.1) !important;
+
+        }
+
+        .eyelet-product {
+            height: 300px;
+            width: 200px;
+
+        }
+
+        .eyelet-product img {
+            width: 50%;
+            height: 50%;
+            object-fit: cover;
+            border-radius: 40%;
+
+        }
+
+        .eyelet-product a img:hover {
+            transition: transform .5s ease;
+            transform: scale(1.2, 1.2) !important;
+        }
+
+        .laces-product p {
+            margin-top: 1rem;
+            text-align: right;
+            font-size: 20px;
+        }
+
+        .eyelet-product p {
+            margin: 1rem;
+            text-align: right;
+            font-size: 20px;
+        }
+
+        .pl-4p {
+            padding-right: -20px;
+        }
+
+        .eyelet-product h3 {
+            border-bottom: 1px dashed black;
+            padding-bottom: 1rem;
+            width: 60%;
+        }
+
+        .laces-product h3 {
+            border-bottom: 1px dashed black;
+            padding-bottom: 1rem;
+            width: 60%;
+        }
+
+        .laces-wrap {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        /* ---------------------------------slogan2-------------------------------------------------------- */
+        .slogan2 {
+            width: 100%;
+            min-height: 100px;
+            background-color: burlywood;
+            /* border-bottom: 1px solid black; */
+        }
+
+        .ml-25 {
+            margin-left: 25rem;
+        }
+
+        .ml-30 {
+            margin-left: 30rem;
+        }
+
+        .slogan2 .text {
+            font-size: 2rem;
+            font-weight: 600;
+        }
+
+        /* ---------------------------------lookbook-------------------------------------------------------- */
+        .lookbook {
+            min-height: 1400px;
+            /* border-bottom: 1px solid black; */
+        }
+
+        .lookbook h2 {
+            margin-left: 20rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid black;
+        }
+
+        .lookbook-wrap {
+            margin-top: 4rem;
+            height: 1200px;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+
+        }
+
+        @media (max-width:1000px) {
+            .lookbook-wrap {
+                margin-top: .5rem;
+                height: 1000px;
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+            }
+
+            .lookbook {
+                min-height: 1000px;
+            }
+
+            .info h3 {
+                font-weight: 500;
+                font-size: 1rem;
+            }
+
+            .leather-selector {
+                width: 80px;
+                height: 80px;
+            }
+
+            .leather-selector img {
+                width: 100%;
+                height: 100%;
+                border-radius: 50%;
+
+            }
+
+            .socialmedia {
+                position: fixed;
+                bottom: 50px;
+                left: 25px;
+
+            }
+
+            .socialmedia a {
+
+                width: 40px;
+                height: 40px;
+                border: rgba(134, 85, 71) 2px dashed;
+                cursor: pointer;
+                text-align: center;
+            }
+
+            .socialmedia a:first-child {
+                border-radius: 15px 15px 0 0;
+            }
+
+            .socialmedia a:last-child {
+                border-radius: 0 0 15px 15px;
+            }
+
+            .socialmedia a i {
+                color: rgba(134, 85, 71);
+                font-size: 1.5rem;
+                padding-top: 6px;
+            }
+
+            .show-wrap {
+                max-width: 700px;
+            }
+
+            .laces-show img,
+            .eyelet-show img {
+                border-radius: 0%;
+                width: 100%;
+                height: 100%;
+
+
+            }
+
+            .eyelet-show,
+            .laces-show {
+                width: 80px;
+                height: 80px;
+            }
+
+            .leather-show {
+                height: 200px;
+                width: 100px;
+
+            }
+
+            .leather-show img {
+                width: 80%;
+                height: 80%;
+                object-fit: cover;
+                border-radius: 50%;
+            }
+
+
+        }
+
+        .item {
+            position: relative;
+            width: 25%;
+            padding: 4px;
+            box-sizing: border-box;
+            counter-increment: item-counter;
+        }
+
+        .item a img:hover {
+            transition: .5s;
+            transform: scale(1.05, 1.05);
+            z-index: 10;
+        }
+
+        .item a img {
+            display: block;
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .item::after {
+            position: absolute;
+            display: block;
+            border-radius: 4px;
+            top: 2px;
+            left: 2px;
+            width: 24px;
+            height: 24px;
+            text-align: center;
+            line-height: 24px;
+            background-color: #000;
+            color: #fff;
+            content: counter(item-counter);
+        }
+
+        /* -----------------------------img效果------------------------------------------------ */
+        .imgPreview {
+
+
+            display: none;
+            top: 0;
+            left: 0;
+            width: 100%;
+            /*容器佔滿整個螢幕*/
+            height: 100%;
+            position: fixed;
+            background: rgba(0, 0, 0, 0.8);
+        }
+
+        .imgPreview img {
+
+
+            z-index: 100;
+            width: 30%;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        /* -----------------------------map---------------------------------------------------- */
+        .map {
+            min-height: 900px;
+            width: 100%;
+        }
+
+        .map h2 {
+            margin-left: 25rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid black;
+
+        }
+
+        .info h3 {
+            font-weight: 500;
+            font-size: 2rem;
+        }
+
+        .fz-2 {
+            font-size: 1.25rem;
+            border-bottom: 1px dashed black;
+        }
+
+        .mt-6 {
+            margin-top: 6rem;
+        }
+
+        /* ------------------------------------------ */
+        #scroll {
+            position: fixed;
+            top: 450px;
+            right: 50px;
+        }
+
+        .scrollItem {
+            width: 40px;
+            height: 40px;
+            border: rgba(134, 85, 71) 2px dashed;
+            cursor: pointer;
+            text-align: center;
+        }
+
+        .scrollItem:first-child {
+            border-radius: 15px 15px 0 0;
+        }
+
+        .scrollItem:last-child {
+            border-radius: 0 0 15px 15px;
+        }
+
+        .scrollItem i {
+            color: rgba(134, 85, 71);
+            font-size: 2rem;
+        }
+
+        /* ------------------------------------------------------ */
+        .yourselection {
+            min-height: 400px;
+
+        }
+
+        .yourselection h2 {
+            margin-left: 23rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid black;
+        }
+
+        .show-wrap {
+            padding: 1rem;
+            width: 1440px;
+            min-height: 400px;
+            border: rgba(134, 85, 71) 2px dashed;
+        }
+
+        .show-wrap i {
+            font-size: 2rem;
+            color: black;
+        }
+
+        .type-show,
+        .sole-show,
+        .eyelet-show,
+        .laces-show {
+            width: 200px;
+            height: 200px;
+        }
+
+
+
+
+        .type-show img,
+        .leather-show img,
+        .sole-show img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+
+        }
+
+        .laces-show img,
+        .eyelet-show img {
+            border-radius: 50%;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .mt-7 {
+            margin-top: 7rem;
+        }
+    </style>
+</head>
+
+
+<body>
+    <div class="socialmedia d-block d-xl-none">
+        <a href="mailto:chenjingkaioffice@gmail.com" class="d-block">
+            <i class="far fa-envelope"></i>
+        </a>
+        <a href="https://www.instagram.com/chenjingkaioffice/" class="d-block">
+            <i class="fab fa-instagram "></i>
+        </a>
+        <a href="https://www.facebook.com/ChenJingkai" class="d-block">
+            <i class="fab fa-facebook "></i>
+        </a>
+    </div>
+
+
+    <div id="scroll">
+        <div id="toTop" class="scrollItem">
+            <i class="fas fa-caret-up"></i>
+        </div>
+        <div id="toBottom" class="scrollItem">
+            <i class="fas fa-sort-down"></i>
+        </div>
+    </div>
+    <nav class="d-xl-flex d-none">
+        <div class="container">
+            <div class="d-xl-flex justify-content-between align-items-center title">
+                <div class="logo mr-auto d-flex align-items-center">
+                    <a href="">
+                        <img src="./img/logo.jpg" alt="">
+                    </a>
+                </div>
+                <div class="nav-center ml-auto d-flex align-items-center">
+                    <a href="#AboutUs" class="col">About</a>
+                    <a href="#type" class="col">type</a>
+                    <a href="#leather" class="col">leather</a>
+                    <a href="#sole" class="col">sole</a>
+                    <a href="#eyeletlaces" class="col">eyelet/laces</a>
+                    <a href="#lookbook" class="col">Lookbook</a>
+                    <a href="#yourselection" class="col">yourdreamshoes?</a>
+                    <a href="#map" class="col">howtobuy</a>
+                </div>
+                <div class="nav-right d-flex align-items-center">
+                    <a href="mailto:chenjingkaioffice@gmail.com">
+                        <i class="far fa-envelope"></i>
+                    </a>
+                    <a href="https://www.instagram.com/chenjingkaioffice/">
+                        <i class="fab fa-instagram "></i>
+                    </a>
+                    <a href="https://www.facebook.com/ChenJingkai">
+                        <i class="fab fa-facebook "></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <nav class="navbar navbar-expand-lg navbar-chenjingkai d-xl-none d-flex title2 fixed-top">
+        <div class="logo2 d-flex align-items-center">
+            <a class="navbar-brand" href="#"><img src="./img/logo.jpg" alt=""></a>
+        </div>
+        <button class="navbar-toggler custom-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon custom-toggler">
+                <i class="fas fa-bars" style="color:#fff; font-size:28px;"></i>
+            </span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="#AboutUs">About</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Choose your dream Shoes!
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" href="#type">type</a>
+                        <a class="dropdown-item" href="#leather">leather</a>
+                        <a class="dropdown-item" href="#sole">sole</a>
+                        <a class="dropdown-item" href="#eyeletlaces">eyelet/laces</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#lookbook" tabindex="-1" aria-disabled="true">lookbook</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#yourselection" tabindex="-1" aria-disabled="true">your dream shoes?</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " href="#map" tabindex="-1" aria-disabled="true">howtobuy</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!-- navbar -->
+    <div class="container">
+        <div class="row">
+
+            <section class="herosection d-flex flex-wrap">
+                <div class="slogan mt-xl-150 col-xl-5 col-12 pl-lg-3p">
+                    <span class="d-block">Your Shoes</span>
+                    <span class="d-block ml-5">Your Design</span>
+                    <span class="d-block mt-2 companyname">by ChenjingkaiOffice</span>
+                </div>
+                <div class="wrap col-xl-7 col-12">
+                    <ul class="img-wrap">
+
+                        <li>
+                            <img src="./img/carousel/1.png" alt="">
+                        </li>
+                        <li>
+                            <img src="./img/carousel/6.png" alt="">
+                        </li>
+                        <li>
+                            <img src="./img/carousel/3.png" alt="">
+                        </li>
+                        <li>
+                            <img src="./img/carousel/4.png" alt="">
+                        </li>
+                        <li>
+                            <img src="./img/carousel/5.png" alt="">
+                        </li>
+                    </ul>
+
+                    <ul class="list-unstyled slider-dots">
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+
+                    <div class="left-arrow-area">
+                        <i class="fas fa-chevron-left"></i>
+                    </div>
+                    <div class="right-arrow-area">
+                        <i class="fas fa-chevron-right"></i>
+                    </div>
+                </div>
+
+            </section>
+        </div>
+
+        <div class="row">
+            <section class="AboutUs d-flex" id="AboutUs">
+                <div class="introduce col-xl-5 mb-4">
+
+                    <h1 data-aos="fade-right" data-aos-duration="1500">About Us</h1>
+                    <div class="introduce-img2  col-xl-7 d-xl-none d-block" data-aos="fade-left"
+                        data-aos-duration="1500">
+                        <img src="./img/intro/intro-1.jpg" alt="">
+                        <img src="./img/intro/intro-3.jpg" class="img200" alt="">
+                    </div>
+                    <h2 class="mt-5" data-aos="fade-right" data-aos-duration="1500">Chenjingkai Office</h2>
+                    <div class="into_p mt-3 " data-aos="fade-right" data-aos-duration="1500">
+                        創立於 2014 年的 ChenjingkaiOffice，提供客製化手工皮鞋的服務，
+                        將皮鞋拆解成鞋款、鞋面材質、鞋底、鞋帶孔與鞋帶，讓消費者選擇自己喜愛的樣式，並透過老師傅手工製作的等待，拿到自己所精心設計的鞋款。座落於通安街的
+                        Chenjingkai Office 因頂級的用料與老師傅的手工技藝讓許多外國人也慕名而來。
+                    </div>
+                </div>
+                <div class="introduce-img  col-xl-7 d-xl-flex d-none" data-aos="fade-left" data-aos-duration="1500">
+                    <img src="./img/intro/intro-1.jpg" alt="">
+                    <img src="./img/intro/intro-3.jpg" class="img200" alt="">
+                </div>
+            </section>
+        </div>
+
+
+    </div>
+    <section class="newsletter">
+        <h1>NEWSLETTER</h1>
+        <div class="nl-btn d-flex">
+            <div class="emailaddress mt-4 justify-content-between d-flex">
+                <input class="emailstyle" placeholder="            Please enter your Email Address">
+                <button class="btn">subscrible</button>
+            </div>
+
+        </div>
+    </section>
+    <div class="container">
+        <div class="row">
+            <section class="type" id="type">
+                <h2 class="mt-6" data-aos="fade-down-right" data-aos-duration="1000">1 >Choose Your Type</h2>
+                <div class="type-wrap d-flex flex-wrap">
+                    <div class="type-product mr-1 col-xl col-lg-6">
+                        <h3 class="mt-10">S01</h3>
+                        <a href="#">
+                            <img src="./img/type/s01.png" alt="" id="s01" data-aos="zoom-out-down"
+                                data-aos-duration="1500">
+                        </a>
+                        <h5>derby shoes </h5>
+                        <p>$4880</p>
+                    </div>
+                    <div class="type-product mr-1 col-xl col-lg-6 ">
+                        <h3 class="mt-10 animate__lightSpeedInLeft">S02</h3>
+                        <a href="">
+                            <img src="./img/type/s02.png" alt="" id="s02" data-aos="zoom-out-down"
+                                data-aos-duration="1500">
+                        </a>
+                        <h5>brogue shoes</h5>
+                        <p>$5880</p>
+                    </div>
+                    <div class="type-product mr-1 col-xl col-lg-6">
+                        <h3 class="mt-10 animate__lightSpeedInLeft">S03</h3>
+                        <a href="">
+                            <img src="./img/type/s03.png" alt="" id="s03" data-aos="zoom-out-down"
+                                data-aos-duration="1500">
+                        </a>
+                        <h5>ankle boots</h5>
+                        <p>$5480</p>
+                    </div>
+                    <div class="type-product mr-1 col-xl col-lg-6">
+                        <h3 class="mt-10 animate__lightSpeedInLeft">S04</h3>
+                        <a href="">
+                            <img src="./img/type/s04.png" alt="" id="s04" data-aos="zoom-out-down"
+                                data-aos-duration="1500">
+                        </a>
+                        <h5>loafers shoes</h5>
+                        <p>$5380</p>
+                    </div>
+                    <div class="type-product col-xl col-lg-6">
+                        <h3 class="mt-10 animate__lightSpeedInLeft">S05</h3>
+                        <a href="">
+                            <img src="./img/type/s05.png" alt="" id="s05" data-aos="zoom-out-down"
+                                data-aos-duration="1500">
+                        </a>
+                        <h5>u-tips shoes</h5>
+                        <p>$5480</p>
+                    </div>
+
+                </div>
+            </section>
+
+        </div>
+        <div class="row">
+            <section class="leather " id="leather">
+                <h2 class="mt-6" data-aos="fade-down-right" data-aos-duration="1500">2>Choose Your Leather</h2>
+                <div class="leather-wrap mt-5 d-flex justify-content-between">
+                    <div class="demo-area" data-aos="zoom-in-right" data-aos-duration="1500">
+                        <img src="./img/leather/1.jpg" alt="">
+                    </div>
+                    <div class="leather-selector-area d-flex flex-wrap" data-aos="zoom-in-left"
+                        data-aos-duration="1500">
+                        <div class="leather-selector col-xl-2 col-3">
+                            <img src="./img/leather/1.jpg" alt="" id="l1">
+                        </div>
+                        <div class="leather-selector col-xl-2 col-3">
+                            <img src="./img/leather/2.jpg" alt="" id="l2">
+                        </div>
+                        <div class="leather-selector col-xl-2 col-3">
+                            <img src="./img/leather/3.jpg" alt="" id="l3">
+                        </div>
+                        <div class="leather-selector col-xl-2 col-3">
+                            <img src="./img/leather/4.jpg" alt="" id="l4">
+                        </div>
+                        <div class="leather-selector col-xl-2 col-3">
+                            <img src="./img/leather/5.jpg" alt="" id="l5">
+                        </div>
+                        <div class="leather-selector col-xl-2 col-3">
+                            <img src="./img/leather/6.jpg" alt="" id="l6">
+                        </div>
+                        <div class="leather-selector col-xl-2 col-3">
+                            <img src="./img/leather/7.jpg" alt="" id="l7">
+                        </div>
+                        <div class="leather-selector col-xl-2 col-3">
+                            <img src="./img/leather/8.jpg" alt="" id="l8">
+                        </div>
+                        <div class="leather-selector col-xl-2 col-3">
+                            <img src="./img/leather/9.jpg" alt="" id="l9">
+                        </div>
+                        <div class="leather-selector col-xl-2 col-3">
+                            <img src="./img/leather/10.jpg" alt="" id="la">
+                        </div>
+                        <div class="leather-selector col-xl-2 col-3">
+                            <img src="./img/leather/11.jpg" alt="" id="lb">
+                        </div>
+                        <div class="leather-selector col-xl-2 col-3">
+                            <img src="./img/leather/12.jpg" alt="" id="lc">
+                        </div>
+                        <div class="leather-selector col-xl-2 col-3">
+                            <img src="./img/leather/13.jpg" alt="" id="ld">
+                        </div>
+                        <div class="leather-selector col-xl-2 col-3">
+                            <img src="./img/leather/14.jpg" alt="" id="le">
+                        </div>
+                        <div class="leather-selector col-xl-2 col-3">
+                            <img src="./img/leather/15.jpg" alt="" id="lf">
+                        </div>
+                        <div class="leather-selector col-xl-2 col-3">
+                            <img src="./img/leather/16.jpg" alt="" id="lh">
+                        </div>
+                        <div class="leather-selector col-xl-2 col-3">
+                            <img src="./img/leather/17.jpg" alt="" id="lj">
+                        </div>
+                        <div class="leather-selector col-xl-2 col-3">
+                            <img src="./img/leather/18.jpg" alt="" id="lk">
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+            </section>
+        </div>
+
+        <div class="row" id="sole">
+            <section class="sole">
+                <h2 class="mt-6" data-aos="fade-down-right" data-aos-duration="1500">3>Choose Your Sole</h2>
+                <div class="sole-wrap">
+                    <div class="nt600 d-flex">
+                        <div class="sole-product mr-1 col-xl-3 col-lg-6">
+                            <h3 class="mt-10">CBH</h3>
+                            <a href=""><img src="./img/sole/CBH-1.png" alt="" class="imgShow" data-aos="fade-up"
+                                    data-aos-duration="1000"></a>
+                            <p>$600</p>
+                        </div>
+                        <div class="sole-product mr-1 col-xl-3 col-lg-6">
+                            <h3 class="mt-10">CBL</h3>
+                            <a href=""><img src="./img/sole/CBL-1.png" alt="" class="imgShow" data-aos="fade-up"
+                                    data-aos-duration="1000"></a>
+                            <p>$600</p>
+                        </div>
+                        <div class="sole-product mr-1 col-xl-3 col-lg-6">
+                            <h3 class="mt-10">CPL</h3>
+                            <a href=""><img src=" ./img/sole/CPL-1.png" alt="" class="imgShow" data-aos="fade-up"
+                                    data-aos-duration="1000"></a>
+                            <p>$600</p>
+                        </div>
+                        <div class="sole-product col-xl-3 col-lg-6">
+                            <h3 class="mt-10">CPH</h3>
+                            <a href=""><img src="./img/sole/CPH-1.png" alt="" class="imgShow" data-aos="fade-up"
+                                    data-aos-duration="1000"></a>
+                            <p>$600</p>
+                        </div>
+
+                    </div>
+
+
+                    <div class="nt800 d-flex mt-10">
+                        <div class="sole-product  mr-1 col-3">
+                            <h3 class="mt-10">LEB</h3>
+                            <a href=""><img src="./img/sole/LEB-1.png" alt="" class="imgShow" data-aos="fade-up"
+                                    data-aos-duration="1000"></a>
+                            <p>$800</p>
+
+                        </div>
+                        <div class="sole-product mr-1 col-3">
+                            <h3 class="mt-10">LET</h3>
+                            <a href=""><img src="./img/sole/LET-1.png" alt="" class="imgShow" data-aos="fade-up"
+                                    data-aos-duration="1000"></a>
+                            <p>$800</p>
+
+
+                        </div>
+                        <div class="sole-product mr-1 col-3">
+                            <h3 class="mt-10">TBB</h3>
+                            <a href=""><img src="./img/sole/TBB-1.png" alt="" class="imgShow" data-aos="fade-up"
+                                    data-aos-duration="1000"></a>
+                            <p>$800</p>
+                        </div>
+                        <div class="sole-product mr-1 col-3 ">
+                            <h3 class="mt-10">TBL</h3>
+                            <a href=""><img src="./img/sole/TBL-1.png" alt="" class="imgShow" data-aos="fade-up"
+                                    data-aos-duration="1000"></a>
+                            <p>$800</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <div class="row">
+            <section class="eyeletlaces" id="eyeletlaces">
+                <h2 class="mt-6" data-aos="fade-down-right" data-aos-duration="1500">4> Choose Your Eyelet & Laces</h2>
+                <div class="laces-wrap mt-5 mr-auto d-flex">
+                    <div class="laces-product col-xl col-lg-6 mr-2">
+                        <h3>BK</h3>
+                        <a href=""><img src="./img/eyelet-lace/lace/BKC.png" alt="" class="imgShow"
+                                data-aos="fade-up"></a>
+                        <p>black contexture</p>
+                    </div>
+                    <div class="laces-product col-xl col-lg-6 mr-2">
+                        <h3>BR</h3>
+                        <a href=""><img src="./img/eyelet-lace/lace/BRC.png" alt="" class="imgShow"
+                                data-aos="fade-up"></a>
+                        <p>brown contexture</p>
+                    </div>
+                    <div class="laces-product col-xl col-lg-6 mr-2">
+                        <h3>CF</h3>
+                        <a href=""><img src="./img/eyelet-lace/lace/CFC.png" alt="" class="imgShow"
+                                data-aos="fade-up"></a>
+                        <p>coffee contexture</p>
+                    </div>
+                    <div class="laces-product col-xl col-lg-6 mr-2">
+                        <h3>WT</h3>
+                        <a href=""><img src="./img/eyelet-lace/lace/WTC.png" alt="" class="imgShow"
+                                data-aos="fade-up"></a>
+                        <p>white contexture</p>
+                    </div>
+                    <div class="laces-product col-xl col-lg-6">
+                        <h3>YE</h3>
+                        <a href=""><img src="./img/eyelet-lace/lace/YEC.png" alt="" class="imgShow"
+                                data-aos="fade-up"></a>
+                        <p>yellow contexture</p>
+                    </div>
+                </div>
+                <div class="eyelet-wrap d-flex flex-wrap  mt-5 mr-auto">
+                    <div class="eyelet-product co1-xl  mr-2 ">
+                        <h3>BK</h3>
+                        <a href=""><img src="./img/eyelet-lace/eyelet/BK.png" alt="" class="imgShow"
+                                data-aos="fade-up"></a>
+                        <p>black rustproofing</p>
+                    </div>
+                    <div class="eyelet-product col-xl  mr-2">
+                        <h3>BZ</h3>
+                        <a href=""><img src="./img/eyelet-lace/eyelet/BZ.png" alt="" class="imgShow"
+                                data-aos="fade-up"></a>
+                        <p>bronze rustproofing</p>
+                    </div>
+                    <div class="eyelet-product col-xl mr-2">
+                        <h3>GD</h3>
+                        <a href=""><img src="./img/eyelet-lace/eyelet/GD.png" alt="" class="imgShow"
+                                data-aos="fade-up"></a>
+                        <p>gold rustproofing</p>
+                    </div>
+                    <div class="eyelet-product col-xl  mr-2">
+                        <h3>NO</h3>
+                        <a href=""><img src="./img/eyelet-lace/eyelet/NO.png" alt="" class="imgShow"
+                                data-aos="fade-up"></a>
+                        <p>none buckle</p>
+                    </div>
+                    <div class="eyelet-product col-xl  mr-2">
+                        <h3>SV</h3>
+                        <a href=""><img src="./img/eyelet-lace/eyelet/SV.png" alt="" class="imgShow"
+                                data-aos="fade-up"></a>
+                        <p>silver rustproofing</p>
+                    </div>
+                    <div class="eyelet-product col-xl  ">
+                        <h3>WT</h3>
+                        <a href=""><img src="./img/eyelet-lace/eyelet/WT.png" alt="" class="imgShow"
+                                data-aos="fade-up"></a>
+                        <p>white rustproofing</p>
+                    </div>
+                </div>
+
+            </section>
+        </div>
+
+    </div>
+
+    <div class="slogan2 d-flex align-items-center justify-content-center">
+        <div class="text text-align-center" data-aos="flip-down" data-aos-duration="1500">
+            “A man need few things A pair of black shoes being one”
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <section class="lookbook" id="lookbook">
+                <h2 class="mt-6" data-aos="fade-down-right" data-aos-duration="1500">5> Give you some ideas?</h2>
+                <div class="lookbook-wrap mr-auto">
+                    <div class="item">
+                        <a href="#">
+                            <img src="./img/lookbook/lookbook1.jpg" alt="" class="imgShow" data-aos="flip-left"
+                                data-aos-duration="1200">
+                        </a>
+                    </div>
+                    <div class="item">
+                        <a href="#">
+                            <img src="./img/lookbook/lookbook2.jpg" alt="" class="imgShow" data-aos="flip-left"
+                                data-aos-duration="1200">
+                        </a>
+                    </div>
+                    <div class="item">
+                        <a href="#">
+                            <img src="./img/lookbook/lookbook3.jpg" alt="" class="imgShow" data-aos="flip-left"
+                                data-aos-duration="1200">
+                        </a>
+                    </div>
+                    <div class="item">
+                        <a href="#">
+                            <img src="./img/lookbook/lookbook4.jpg" alt="" class="imgShow" data-aos="flip-left"
+                                data-aos-duration="1200">
+                        </a>
+                    </div>
+                    <div class="item">
+                        <a href="#">
+                            <img src="./img/lookbook/lookbook5.jpg" alt="" class="imgShow" data-aos="flip-left"
+                                data-aos-duration="1200">
+                        </a>
+                    </div>
+                    <div class="item">
+                        <a href="#">
+                            <img src="./img/lookbook/lookbook6.jpg" alt="" class="imgShow" data-aos="flip-left"
+                                data-aos-duration="1200">
+                        </a>
+                    </div>
+                    <div class="item">
+                        <a href="#">
+                            <img src="./img/lookbook/lookbook7.jpg" alt="" class="imgShow" data-aos="flip-left"
+                                data-aos-duration="1200">
+                        </a>
+                    </div>
+                    <div class="item">
+                        <a href="#">
+                            <img src="./img/lookbook/lookbook8.jpg" alt="" class="imgShow" data-aos="flip-left"
+                                data-aos-duration="1200">
+                        </a>
+                    </div>
+                    <div class="item">
+                        <a href="#">
+                            <img src="./img/lookbook/lookbook9.jpg" alt="" class="imgShow" data-aos="flip-left"
+                                data-aos-duration="1200">
+                        </a>
+                    </div>
+                    <div class="item">
+                        <a href="#">
+                            <img src="./img/lookbook/lookbook14.jpg" alt="" class="imgShow" data-aos="flip-left"
+                                data-aos-duration="1200">
+                        </a>
+                    </div>
+                    <div class="item">
+                        <a href="#">
+                            <img src="./img/lookbook/lookbook11.jpg" alt="" class="imgShow" data-aos="flip-left"
+                                data-aos-duration="1200">
+                        </a>
+                    </div>
+                    <div class="item">
+                        <a href="#">
+                            <img src="./img/lookbook/lookbook12.jpg" alt="" class="imgShow" data-aos="flip-left"
+                                data-aos-duration="1200">
+                        </a>
+                    </div>
+                    <div class="item">
+                        <a href="#">
+                            <img src="./img/lookbook/lookbook13.jpg" alt="" class="imgShow" data-aos="flip-left"
+                                data-aos-duration="1200">
+                        </a>
+                    </div>
+                    <div class="imgPreview">
+                        <img src="#" alt="" id="imgPreview">
+                    </div>
+                </div>
+            </section>
+        </div>
+        <!--  -->
+        <div class="row">
+            <section class="yourselection" id="yourselection">
+                <h2 class="mt-7" data-aos="fade-down-right" data-aos-duration="1500">6> Your dream shoes?</h2>
+                <div class="show-wrap  d-flex flex-wrap mt-4 justify-content-between align-items-center ">
+                    <div class="type-show col-xl-2 col-4 mt-xl-2">
+                        <img src="./img/type/s01.png" alt="" data-aos="fade-up">
+                    </div>
+                    <i class="fas fa-plus col-2 col-xl-1"></i>
+                    <div class="leather-show  col-xl col-4 mt-xl-2">
+                        <img src="./img/leather/10.jpg" alt="" data-aos="fade-up">
+                    </div>
+                    <i class="fas fa-plus col-2 col-xl-1"></i>
+                    <div class="sole-show  col-xl col-4 mt-xl-2">
+                        <img src="./img/sole/CBH-1.png" alt="" data-aos="fade-up">
+                    </div>
+                    <i class="fas fa-plus col-2 col-xl-1"></i>
+                    <div class="eyelet-show  col-xl col-4 mt-xl-2">
+                        <img src="./img/eyelet-lace/eyelet/BK.png" alt="" data-aos="fade-up">
+                    </div>
+                    <i class="fas fa-plus col-2 col-xl-1"></i>
+                    <div class="laces-show  col-xl col-4 mt-xl-2">
+                        <img src="./img/eyelet-lace/lace/BKC.png" alt="" data-aos="fade-up">
+                    </div>
+                </div>
+            </section>
+        </div>
+        <!--  -->
+        <div class="row">
+            <section class="map" id="map">
+                <h2 class="mt-4" data-aos="fade-down-right" data-aos-duration="1500">7> How to buy?</h2>
+                <div class="map-wrap d-flex ">
+                    <div class="info col-xl-6 col-12 mb-4" data-aos="fade-right" data-aos-duration="1500">
+                        <div class="googlemap mt-5 d-xl-none d-block">
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3615.158751507968!2d121.55042821544689!3d25.028686044657487!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442aa33362081eb%3A0x1cf08f9f31358504!2zMTA25Y-w5YyX5biC5aSn5a6J5Y2A6YCa5a6J6KGXMTM06Jmf!5e0!3m2!1szh-TW!2stw!4v1624534074753!5m2!1szh-TW!2stw"
+                                width="700" height="600" style="border:0; border-radius: 30px;" allowfullscreen=""
+                                loading="lazy"></iframe>
+                        </div>
+
+                        <h3 class="mt-5">
+                            Address：<br>
+                            <span class="ml-5 fz-2"> 台灣台北市大安區通安街134號<br></span>
+                            <span class="ml-5 fz-2"> 106, Taiwan, Taipei City, Da’an District, Tongan Street,
+                                NO.134</span>
+                        </h3>
+                        <h3>TEL：
+                            <span class=" fz-2"> (+886)0983-733-838</span>
+                        </h3>
+
+
+                        <h3>Facebook:
+                            <span class=" fz-2"> https://www.facebook.com/ChenJingkai/</span>
+                        </h3>
+
+                        <h3>Instagram:
+                            <span class=" fz-2">https://www.instagram.com/chenjingkaioffice/</span>
+                        </h3>
+
+                        <h3 class="mt-3">Closed on : <span class="fz-2">Monday & Tuseday</span> </h3>
+                        <h3>Business hours:
+                            <span class=" fz-2"> 16:00-20:00</span>
+                        </h3>
+                    </div>
+                    <div class="googlemap col-xl-6 mt-5 d-xl-flex d-none" data-aos="fade-left" data-aos-duration="1500">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3615.158751507968!2d121.55042821544689!3d25.028686044657487!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442aa33362081eb%3A0x1cf08f9f31358504!2zMTA25Y-w5YyX5biC5aSn5a6J5Y2A6YCa5a6J6KGXMTM06Jmf!5e0!3m2!1szh-TW!2stw!4v1624534074753!5m2!1szh-TW!2stw"
+                            width="800" height="600" style="border:0; border-radius: 30px;" allowfullscreen=""
+                            loading="lazy"></iframe>
+                    </div>
+                </div>
+            </section>
+
+
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+        integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+        integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous">
+        </script>
+    <!-- ------------------------------------輪播牆--------------------------------------------- -->
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="./slick-1.8.1/slick/slick.min.js"></script>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script>
+        AOS.init();
+    </script>
+
+
+
+    <script>
+
+
+        $('.slider-dots li').hover(function () {
+            console.log('hi');
+            console.log('li index:', $(this).index() * -800 + 'px');
+            const positionX = $(this).index() * -800;
+            nowPage = $(this).index();
+            changepage();
+
+        })
+
+        let nowPage = 0;
+        changepage();
+
+        $('.left-arrow-area').click(function () {
+            console.log('left-arrow-area clicked');
+
+            if (nowPage === 0) return;
+
+            nowPage = nowPage - 1;
+            console.log('nowPage', nowPage);
+            changepage();
+        })
+        $('.right-arrow-area').click(function () {
+            console.log('right-arrow-area clicked');
+
+            if (nowPage === 4) return;
+
+            nowPage = nowPage + 1;
+            console.log('nowPage', nowPage);
+            changepage();
+        })
+
+        function changepage() {
+            $('.slider-dots li').eq(nowPage).css('background', 'white').siblings().css('background', 'transparent');
+            const positionX = nowPage * -800;
+            $('.img-wrap').css('transform', `translateX(${positionX}px)`);
+        }
+
+        //img show
+
+    </script>
+
+    <script>
+
+        $('.slick1').slick();
+    </script>
+
+
+
+
+    <script>
+        $(function () {
+
+
+            $('.imgShow').on('click', function () {
+
+
+                let src = $(this).attr('src');
+                $('.imgPreview img').attr('src', src);
+                $('.imgPreview').css('transition', '.5s').show()
+            });
+            $('.imgPreview').on('click', function () {
+
+
+                $('.imgPreview').hide()
+            });
+        })
+    </script>
+    <!--------------------------------- a連結------------------------------------------------ -->
+    <script>
+
+        $('.item a').click(function (event) {
+            event.preventDefault();
+        })
+        $('.type-product a').click(function (event) {
+            event.preventDefault();
+        })
+        $('.sole-product a').click(function (event) {
+            event.preventDefault();
+        })
+        $('.laces-product a').click(function (event) {
+            event.preventDefault();
+        })
+        $('.eyelet-product a').click(function (event) {
+            event.preventDefault();
+        })
+
+    </script>
+
+    <script>
+        $('.leather-selector img').click(function () {
+            let myLeather = $(this).attr('src');
+            $('.demo-area img').attr('src', myLeather)
+            $('.leather-show img').attr('src', myLeather)
+        })
+
+        $('.type-product a img').click(function () {
+            let myType = $(this).attr('src');
+            $('.type-show img').attr('src', myType)
+        })
+        $('.sole-product a img').click(function () {
+            let mySole = $(this).attr('src');
+            $('.sole-show img').attr('src', mySole)
+        })
+        $('.laces-product a img').click(function () {
+            let myLaces = $(this).attr('src');
+            $('.laces-show img').attr('src', myLaces)
+        })
+        $('.eyelet-product a img').click(function () {
+            let myEyelet = $(this).attr('src');
+            $('.eyelet-show img').attr('src', myEyelet)
+        })
+    </script>
+    <!-- --------------------------------type動態效果-------------------------------------------------- -->
+    <script>
+
+        $('#s01').hover(function () {
+            $("#s01").fadeOut(function () {
+                $(this).attr("src", './img/type/s012.png').fadeIn();
+            });
+        }, function () {
+            $('#s01').fadeOut(function () {
+                $(this).attr("src", './img/type/s01.png').fadeIn();
+            })
+        });
+
+
+        $('#s02').hover(function () {
+            $("#s02").fadeOut(function () {
+                $(this).attr("src", './img/type/s022.png').fadeIn();
+            });
+        }, function () {
+            $('#s02').fadeOut(function () {
+                $(this).attr("src", './img/type/s02.png').fadeIn();
+            })
+        });
+        $('#s03').hover(function () {
+            $("#s03").fadeOut(function () {
+                $(this).attr("src", './img/type/s032.png').fadeIn();
+            });
+        }, function () {
+            $('#s03').fadeOut(function () {
+                $(this).attr("src", './img/type/s03.png').fadeIn();
+            })
+        });
+        $('#s04').hover(function () {
+            $("#s04").fadeOut(function () {
+                $(this).attr("src", './img/type/s042.png').fadeIn();
+            });
+        }, function () {
+            $('#s04').fadeOut(function () {
+                $(this).attr("src", './img/type/s04.png').fadeIn();
+            })
+        });
+        $('#s05').hover(function () {
+            $("#s05").fadeOut(function () {
+                $(this).attr("src", './img/type/s052.png').fadeIn();
+            });
+        }, function () {
+            $('#s05').fadeOut(function () {
+                $(this).attr("src", './img/type/s05.png').fadeIn();
+            })
+        });
+        //
+
+
+    </script>
+
+    <script type="text/javascript">
+        $(function () {
+            var speed = 1200;
+            //go to top
+            $("#toTop").click(function () {
+                $("html,body").animate({ "scrollTop": 0 }, speed);
+            });
+            // go to bottom
+            var windowHeight = parseInt($("body").css("height"));//整个页面的高度
+            $("#toBottom").click(function () {
+                $("html,body").animate({ "scrollTop": windowHeight }, speed);
+            });
+        });
+
+    </script>
+
+    <script>
+
+        $("html,body").stop().animate({ "scrollTop": 0 }, speed);
+    </script>
+
+    <script>
+        ('html, body').animate({
+            scrollTop: (hash).offset().top
+        }, 800, function () {
+            window.location.hash = hash;
+        });
+    </script>
+</body>
+
+</html>
